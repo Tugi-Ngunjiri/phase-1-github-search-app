@@ -10,12 +10,17 @@ const searchTerm = form.querySelector('input').value;
   .then( data => {
     console.log(data);
 
-    const users = User.map(User=> {
-user.classList.add = ("col -md-3")
-       user.innerHTML = ` <div>
-   <a href="${User.html_url}">${User.login}</a>
-    </div>`
-    userContent.appendChild(userName);
+    users.forEach(user => {
+    user.classList.add("col-md-3");
+      user.innerHTML = ` <div class="card mb-4" style="width: 18rem;">
+                                  <img src=${user.text} class="card-img-top" alt="">
+                                  <div class="user-body">
+                                    <h5 class="user-title">${user.title}</h5>
+                                   <p class="user-text">${user.description}</p>
+                                  </div>
+                                </div>`
+      userContent.appendChild(userContent);
+
       });
   
       
