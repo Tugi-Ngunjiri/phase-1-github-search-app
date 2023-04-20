@@ -3,7 +3,9 @@
 }
 
 h1{
- background-color: rgb(66, 66, 126);
+ background-color: lightgrey;
    }
 
-   
+   body{
+    background-color:lightgrey
+   }
