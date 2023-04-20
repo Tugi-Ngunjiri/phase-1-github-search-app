@@ -13,7 +13,7 @@ const searchTerm = form.querySelector('input').value;
      const users = data.items;
      let  UserA = Jane;
      let UserB=  Peter;
-     let Users = Jane  + Peter;
+     let Users = Peter + Jane;
 
     users.forEach(user => {
     user.classList.add("col-md-3");
