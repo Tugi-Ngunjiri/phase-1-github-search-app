@@ -10,7 +10,7 @@ const searchTerm = form.querySelector('input').value;
   .then( data => {
     console.log(data);
 
-    const users = data.map(user=> {
+    const users = User.map(user=> {
 user.classList.add = ("col -md-3")
        user.innerHTML = ` <div>
    <a href="${repo.owner.html_url}">${repo.owner.login}</a>
