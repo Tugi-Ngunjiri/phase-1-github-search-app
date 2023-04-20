@@ -10,6 +10,9 @@ const searchTerm = form.querySelector('input').value;
   .then( data => {
     console.log(data);
 
+     const users = data.items;
+     "user${userContent}"
+
     users.forEach(user => {
     user.classList.add("col-md-3");
       user.innerHTML = ` <div>
