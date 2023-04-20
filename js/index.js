@@ -13,11 +13,10 @@ const searchTerm = form.querySelector('input').value;
     users.forEach(user => {
     user.classList.add("col-md-3");
       user.innerHTML = ` <div>
-                                  <img src=${user.profile} class="user-img-top" alt="">
-                                  <div class="user-body">
-                                    <h5 class="user-name">${username}</h5>
-                                   <p class="user-text">${user.description}</p>
-                                  </div>
+                             <img src=${user.profile} class="user-img-top" alt="">
+                              <div class="user-name">${user.login}</div>
+                               <p class="user-text">${user.description}</p>
+                          </div>
                                 </div>`
       userContent.appendChild(userContent);
 
