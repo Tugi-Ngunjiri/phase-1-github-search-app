@@ -11,7 +11,9 @@ const searchTerm = form.querySelector('input').value;
     console.log(data);
 
      const users = data.items;
-     "user${userContent}"
+     let  UserA = Jane;
+     let UserB=  Peter;
+     let Users = Jane  + Peter;
 
     users.forEach(user => {
     user.classList.add("col-md-3");
