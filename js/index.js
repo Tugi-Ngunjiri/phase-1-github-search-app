@@ -10,10 +10,10 @@ const searchTerm = form.querySelector('input').value;
   .then( data => {
     console.log(data);
 
-    const users = User.map(user=> {
+    const users = User.map(User=> {
 user.classList.add = ("col -md-3")
        user.innerHTML = ` <div>
-   <a href="${repo.owner.html_url}">${repo.owner.login}</a>
+   <a href="${User.html_url}">${User.login}</a>
     </div>`
     userContent.appendChild(userName);
       });
