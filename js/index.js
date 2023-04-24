@@ -9,20 +9,17 @@ const searchTerm = form.querySelector('input').value;
   .then(res => res.json())
   .then( data => {
     console.log(data);
-
-     const users = data.items;
-     let  UserA = Jane;
-     let UserB=  Peter;
-     let Users = Peter + Jane;
+;
 
     users.forEach(user => {
     user.classList.add("col-md-3");
       user.innerHTML = ` <div>
-                             <img src=${user.img} class="user-img-top" alt="">
-                              <div class="user-name">${user.login}</div>
-                               <p class="user-text">${user.description}</p>
-                          </div>
-                                </div>`
+                             <img src=${user.avatar_url} class="user-img-top" alt="">
+                              <p class="user-name">${user.login}</p>
+                               <p class="user-body">${user.user. profile }</p>
+                          <a href="https://developer.github.com/v3/search/#search-users"></a>
+                               
+                            `
       userContent.appendChild(userContent);
 
       });
