@@ -1,33 +1,25 @@
-document.addEventListener("DOMContentLoaded", () =>{
-  const form =document.querySelector('form');
-  form.addEventListener('submit', (e) => {
- e.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector('form');
+  const userContent = document.querySelector('#user-content');
 
-const searchTerm = form.querySelector('input').value;
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const searchTerm = form.querySelector('input').value;
+    fetch(`https://api.github.com/search/users?q=${searchTerm}`)
+      .then(res => res.json())
+      .then(data => {
+        const users = data.items;
+        console.log(users);
 
- fetch("https://api.github.com/search/users?q=" +searchTerm)
-  .then(res => res.json())
-  .then( data => {
-    console.log(data);
-;
-
-    users.forEach(userDiv => {
-    userDiv.innerHTML = ` <div>
-                             <img src=${user.avatar_url} class="user-img-top" alt="">
-                              <p class="user-name">${user.login}</p>
-                    <a href="https://developer.github.com/v3/search/#search-users"></a>`
-      userContent.appendChild(userDiv);
-
+        users.forEach(user => {
+          const userDiv = document.createElement('div');
+          userDiv.innerHTML = ` <img src=${user.avatar_url} class="user-img-top" alt="">
+                                <p class="user-name">${user.login}</p>
+                                <a href=${user.html_url} target="_blank">Link to ${user.login}'s GitHub Profile</a>
+                                <button>View Repos</button>`
+          userContent.appendChild(userDiv);
+        });
       });
-  
-      
-  })
- 
-  
-
+    
   });
-  
-   })
-
-
-
+});
