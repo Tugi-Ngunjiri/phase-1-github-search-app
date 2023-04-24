@@ -11,16 +11,12 @@ const searchTerm = form.querySelector('input').value;
     console.log(data);
 ;
 
-    users.forEach(user => {
-    user.classList.add("col-md-3");
-      user.innerHTML = ` <div>
+    users.forEach(userDiv => {
+    userDiv.innerHTML = ` <div>
                              <img src=${user.avatar_url} class="user-img-top" alt="">
                               <p class="user-name">${user.login}</p>
-                               <p class="user-body">${user.user. profile }</p>
-                          <a href="https://developer.github.com/v3/search/#search-users"></a>
-                               
-                            `
-      userContent.appendChild(userContent);
+                    <a href="https://developer.github.com/v3/search/#search-users"></a>`
+      userContent.appendChild(userDiv);
 
       });
   
