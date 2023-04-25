@@ -13,10 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         users.forEach(user => {
           const userDiv = document.createElement('div');
-          userDiv.innerHTML = ` <img src=${user.avatar_url} class="user-img-top" alt="">
+          userDiv.innerHTML = `<img src=${user.avatar_url} class="user-img-top" alt="">
                                 <p class="user-name">${user.login}</p>
                                 <a href=${user.html_url} target="_blank">Link to ${user.login}'s GitHub Profile</a>
-                                <button>View Repos</button>`
+                                <p class="user-bio">${user.bio}</p>;
+                          <button id="myBtn">Click Here</button>`
           userContent.appendChild(userDiv);
         });
       });
