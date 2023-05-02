@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector('form');
-  const userContent = document.querySelector('#user-content');
+  const userContent = document.querySelector('#user-Content');
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <p class="user-name">${user.login}</p>
                                 <a href=${user.html_url} target="_blank">Link to ${user.login}'s GitHub Profile</a>
                                 <p class="user-bio">${user.bio}</p>;
-                          <button id="myBtn">Click Here</button>`
+                          <button id="myBtn onclick="onBtnClick()">Click Here</button>`
+
           userContent.appendChild(userDiv);
         });
       });
