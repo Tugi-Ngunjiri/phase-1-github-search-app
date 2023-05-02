@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
           userDiv.innerHTML = `<img src=${user.avatar_url} class="user-img-top" alt="">
                                 <p class="user-name">${user.login}</p>
                                 <a href=${user.html_url} target="_blank">Link to ${user.login}'s GitHub Profile</a>
-                                <p class="user-bio">${user.bio}</p>;
+                               <p>Github Profiles</p>;
                           <button id="myBtn onclick="onBtnClick()">Click Here</button>`
 
           userContent.appendChild(userDiv);
