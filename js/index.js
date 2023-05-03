@@ -16,9 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
           userDiv.innerHTML = `<img src=${user.avatar_url} class="user-img-top" alt="">
                                 <p class="user-name">${user.login}</p>
                                 <a href=${user.html_url} target="_blank">Link to ${user.login}'s GitHub Profile</a>
-                                <a href=${user.repos} target="_blank">Link to ${user.repos}'s GitHub Profile</a>
-                                <a href=${user.followers} target="_blank">Link to ${user.followers}'s GitHub Profile</a>
-                          <button id="myBtn onclick="onBtnClick()">Click Here</button>`
+                               <button id="myBtn onclick="onBtnClick()">Click Here</button>
+                               listrepos("HiDe-Techno-Tips", document.getElementById("pin")).then(reposcount => {
+                                // In this section, variable reposcount stores the total number of Repositories.
+                            });`
 
           userContent.appendChild(userDiv);
         });
